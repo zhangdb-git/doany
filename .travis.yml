@@ -1,0 +1,16 @@
+dist: bionic
+
+
+services:
+  - docker
+
+
+script:
+  - docker pull docker.elastic.co/eck/eck-operator:1.2.1
+  - docker tag docker.elastic.co/eck/eck-operator:1.2.1 zhangdber/eck-operator:1.2.1
+  - docker login -u zhangdber -p 123456aaa docker.io
+  - docker push zhangdber/eck-operator:1.2.1
+    
+    
+arch:
+  - amd64
