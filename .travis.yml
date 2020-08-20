@@ -13,4 +13,4 @@ script:
     
     
 arch:
-  - amd64
+  - arm64
